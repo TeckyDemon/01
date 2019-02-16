@@ -155,7 +155,11 @@ def _201(input,output)
 	File.open(input,'r') do |f|
 		File.open(output,'w') do |f2|
 			while not f.eof?
-				i=INSTRUCTIONS.index(f.read(1))
+				c=f.read(1)
+				if not INSTRUCTIONS.include?(c) then
+					next
+				end
+				i=INSTRUCTIONS.index(c)
 				if last<=i then
 					f2<<'0'*(i-last)
 				else
