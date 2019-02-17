@@ -1,5 +1,7 @@
 # 01
 
+## Description
+
 01 is an esoteric programming language with only 2 instructions.
 
 ## Prerequisites
@@ -8,37 +10,41 @@
 
 Install Ruby: https://rubyinstaller.org/
 
-`gem install securerandom`
+Install required gems:
+
+`$ gem install securerandom`
 
 ### Linux
 
 ```
-sudo apt update && sudo apt upgrade -y
-sudo apt install ruby -y
-sudo gem install securerandom
+$ sudo apt update && sudo apt upgrade -y
+$ sudo apt install ruby -y
+$ sudo gem install securerandom
 ```
 
 ## Installing
 
-`git clone "https://github.com/DeBos99/01.git"`
+Copy this repository:
+
+`$ git clone "https://github.com/DeBos99/01.git"`
 
 ## Usage
 
 Help:
 
-`main.rb --help`
+`$ main.rb --help`
 
 Compile \*.zo (see: [file extensions](#file-extensions)) file to other language source file (see: [supported languages](#supported-languages)):
 
-`main.rb --convert LANG --input INPUT --output OUTPUT`
+`$ main.rb --convert LANG --input INPUT --output OUTPUT`
 
 Convert \*.tzo (see: [file extensions](#file-extensions)) file to \*.zo (see: [file extensions](#file-extensions)) file:
 
-`main.rb --generate LANG --input INPUT --output OUTPUT`
+`$ main.rb --generate LANG --input INPUT --output OUTPUT`
 
 Minify \*.zo (see: [file extensions](#file-extensions)) file if possible:
 
-`main.rb --minify --input INPUT --output OUTPUT`
+`$ main.rb --minify --input INPUT --output OUTPUT`
 
 ## Instructions
 
@@ -77,7 +83,7 @@ Hello World:
 
 ## Authors
 
-* **Michał Wróblewski** - *Everything* - [DeBos99](https://github.com/DeBos99)
+* **Michał Wróblewski** - Main Developer - [DeBos99](https://github.com/DeBos99)
 
 ## License
 
