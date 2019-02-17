@@ -1,9 +1,9 @@
 require 'securerandom'
 require 'optparse'
 
-INSTRUCTIONS=['>','<','+','-','.',',','[',']','0','1']
+COMMANDS=['>','<','+','-','.',',','[',']','0','1']
 
-ERROR_NOT_IMPLEMENTED='Instruction "%s" not implemented in "%s".'
+ERROR_NOT_IMPLEMENTED='Command "%s" not implemented in "%s".'
 ERROR_NOT_SUPPORTED='Language "%s" is not supported.'
 
 def error(e)
@@ -144,10 +144,10 @@ def _012(input,output,lang)
 				c=f.read(1)
 				if c=='0' then
 					if last=='1' then
-						f2<<_012c(lang,INSTRUCTIONS[id],count)
+						f2<<_012c(lang,COMMANDS[id],count)
 						count=1
 					end
-					id+=id==INSTRUCTIONS.length-1?-id:1
+					id+=id==COMMANDS.length-1?-id:1
 				elsif c=='1' then
 					if c==last or count==0 then
 						count+=1
@@ -156,7 +156,7 @@ def _012(input,output,lang)
 				last=c
 			end
 			if last=='1' then
-				f2<<_012c(lang,INSTRUCTIONS[id],count)
+				f2<<_012c(lang,COMMANDS[id],count)
 				count=1
 			end
 		end
@@ -169,14 +169,14 @@ def _201(input,output)
 		File.open(output,'w') do |f2|
 			while not f.eof?
 				c=f.read(1)
-				if not INSTRUCTIONS.include?(c) then
+				if not COMMANDS.include?(c) then
 					next
 				end
-				i=INSTRUCTIONS.index(c)
+				i=COMMANDS.index(c)
 				if last<=i then
 					f2<<'0'*(i-last)
 				else
-					f2<<'0'*(INSTRUCTIONS.length-last+i)
+					f2<<'0'*(COMMANDS.length-last+i)
 				end
 				f2<<'1'
 				last=i
