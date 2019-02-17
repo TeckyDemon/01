@@ -3,6 +3,13 @@ require 'optparse'
 
 INSTRUCTIONS=['>','<','+','-','.',',','[',']','0','1']
 
+ERROR_NOT_IMPLEMENTED='Instruction "%s" not implemented in "%s".'
+ERROR_NOT_SUPPORTED='Language "%s" is not supported.'
+
+def error(e)
+	puts 'Error: %s'%e
+	exit
+end
 def _012c(lang,id,count)
 	case lang
 		when 'raw'
@@ -14,7 +21,7 @@ def _012c(lang,id,count)
 				when '0'
 					return '[-]'
 				else
-					return ''
+					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
 		when 'c'
 			case id
@@ -64,6 +71,8 @@ def _012c(lang,id,count)
 					return 'p=d[0];'
 				when 'END'
 					return '}'
+				else
+					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
 		when 'c++'
 			case id
@@ -117,7 +126,11 @@ def _012c(lang,id,count)
 					return 'p=d[0];'
 				when 'END'
 					return '}'
+				else
+					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
+		else
+			error(ERROR_NOT_SUPPORTED%lang)
 	end
 end
 def _012(input,output,lang)
@@ -188,13 +201,13 @@ OptionParser.new do |parser|
 		end
 		minify(options[:input],options[:output])
 	end
-	parser.on('-c', '--convert LANG', 'Convert .zo file to other LANG file') do |x|
+	parser.on('-c', '--convert LANG', 'Convert *.zo file to other LANG file') do |x|
 		if not options[:input] or not options[:output] then
 			raise OptionParser::MissingArgument
 		end
 		_012(options[:input],options[:output],x)
 	end
-	parser.on('-g', '--generate', 'Convert ASCII to .zo file') do |x|
+	parser.on('-g', '--generate', 'Convert *.tzo to *.zo file') do |x|
 		if not options[:input] or not options[:output] then
 			raise OptionParser::MissingArgument
 		end
