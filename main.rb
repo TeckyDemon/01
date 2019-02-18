@@ -54,10 +54,8 @@ def _012c(lang,id,count)
 				when '.'
 					return 'putchar(*p);'*count
 				when ','
-					if count==1 then
-						return 'scanf(\" %c\",&p);'
-					elsif count==2 then
-						return 'scanf(\" %c\",&p);scanf(\" %c\",&p);'
+					if count<=2 then
+						return 'scanf(\" %c\",&p);'*count
 					else
 						return "for(int i=0;i<#{count};i++)scanf(\" %c\",p);"
 					end
@@ -109,10 +107,8 @@ def _012c(lang,id,count)
 						return "std::cout<<std::string(#{count},*p);"
 					end
 				when ','
-					if count==1 then
-						return 'std::cin>>*p;'
-					elsif count==2 then
-						return 'std::cin>>*p;std::cin>>*p;'
+					if count<=2 then
+						return 'std::cin>>*p;'*count
 					else
 						return "for(int i=0;i<#{count};i++)std::cin>>*p;"
 					end
@@ -128,6 +124,43 @@ def _012c(lang,id,count)
 					return '}'
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
+			end
+		when 'ruby'
+			case id
+				when 'START'
+					return 'd=[0]*30000;p=0;'
+				when '>'
+					return "p+=#{count};"
+				when '<'
+					return "p-=#{count};"
+				when '+'
+					return "d[p]+=#{count};"
+				when '-'
+					return "d[p]-=#{count};"
+				when '.'
+					if count==1 then
+						return 'print d[p].chr;'
+					else
+						return "print d[p].chr*#{count};"
+					end
+				when ','
+					if count==1 then
+						return 'd[p]=gets.ord;'
+					elsif count==2 then
+						return 'gets;d[p]=gets.ord;'
+					else
+						return "#{count-1}.times{gets};d[p]=gets.ord;"
+					end
+				when '['
+					return 'while d[p]>0;'*count
+				when ']'
+					return 'end;'*count
+				when '0'
+					return 'd[p]=0;'
+				when '1'
+					return 'p=0;'
+				when 'END'
+					return ''
 			end
 		else
 			error(ERROR_NOT_SUPPORTED%lang)
