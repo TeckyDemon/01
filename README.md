@@ -2,7 +2,7 @@
 
 ## Description
 
-01 is an esoteric programming language with only 2 instructions.
+**01** is an esoteric programming language with only 2 instructions.
 
 ## Prerequisites
 
@@ -66,9 +66,10 @@ Minify \*.zo (see: [file extensions](#file-extensions)) file if possible:
 
 ## Supported languages
 
-* Brainfuck (not all instructions)
+* Brainfuck (some commands are not implemented)
 * C
 * C++
+* Ruby (more complicated program may not work)
 
 ## File extensions
 
