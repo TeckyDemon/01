@@ -26,7 +26,7 @@ def _012c(lang,id,count)
 		when 'c'
 			case id
 				when 'START'
-					return "#include<stdio.h>\nmain(){char d[30000],*p=d,s[30000],*a=s;"
+					return "#include<stdio.h>\nmain(){char d[30000],*p=d;"
 				when '>'
 					if count==1 then
 						return 'p++;'
@@ -77,7 +77,7 @@ def _012c(lang,id,count)
 		when 'c++'
 			case id
 				when 'START'
-					return "#include <iostream>\nmain(){char d[30000],*p=d,s[30000],*a=s;"
+					return "#include <iostream>\nmain(){char d[30000],*p=d;"
 				when '>'
 					if count==1 then
 						return 'p++;'
