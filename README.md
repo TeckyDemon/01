@@ -24,7 +24,7 @@ $ sudo gem install securerandom
 
 ## Installation
 
-Copy this repository:
+Clone this repository:
 
 `$ git clone "https://github.com/DeBos99/01.git"`
 
