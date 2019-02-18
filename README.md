@@ -22,7 +22,7 @@ $ sudo apt install ruby -y
 $ sudo gem install securerandom
 ```
 
-## Installing
+## Installation
 
 Copy this repository:
 
