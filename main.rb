@@ -1,7 +1,7 @@
 require 'securerandom'
 require 'optparse'
 
-COMMANDS=['>','<','+','-','.',',','[',']','0','1','x','X']
+COMMANDS=['>','<','+','-','.',',','[',']','0','1','x','X','c','C']
 
 ERROR_NOT_IMPLEMENTED='Command "%s" not implemented in "%s".'
 ERROR_NOT_SUPPORTED='Language "%s" is not supported.'
@@ -16,15 +16,21 @@ def _012c(lang,id,count)
 			return id*count
 		when 'brainfuck'
 			case id
+				when 'START','END'
+					return ''
 				when '>','<','+','-','.',',','[',']'
 					return id*count
 				when '0'
 					return '[-]'
+				when 'c'
+					return '>[-]>[-]<<[>+>+<<-]>>[-<<+>>]<<'
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
 		when 'blub'
 			case id
+				when 'START','END'
+					return ''
 				when '>'
 					return 'Blub. Blub?'*count
 				when '<'
@@ -43,11 +49,15 @@ def _012c(lang,id,count)
 					return 'Blub? Blub!'*count
 				when '0'
 					return 'Blub! Blub? Blub! Blub! Blub? Blub!'
+				when 'c'
+					return 'Blub. Blub? Blub! Blub? Blub! Blub! Blub? Blub! Blub. Blub? Blub! Blub? Blub! Blub! Blub? Blub! Blub? Blub. Blub? Blub. Blub! Blub? Blub. Blub? Blub. Blub. Blub. Blub? Blub. Blub. Blub? Blub. Blub? Blub. Blub! Blub! Blub? Blub! Blub. Blub? Blub. Blub? Blub! Blub? Blub! Blub! Blub? Blub. Blub? Blub. Blub. Blub. Blub. Blub? Blub. Blub? Blub? Blub! Blub? Blub. Blub? Blub.'
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
 		when 'ook!'
 			case id
+				when 'START','END'
+					return ''
 				when '>'
 					return 'Ook. Ook?'*count
 				when '<'
@@ -66,11 +76,15 @@ def _012c(lang,id,count)
 					return 'Ook? Ook!'*count
 				when '0'
 					return 'Ook! Ook? Ook! Ook! Ook? Ook!'
+				when 'c'
+					return 'Ook. Ook? Ook! Ook? Ook! Ook! Ook? Ook! Ook. Ook? Ook! Ook? Ook! Ook! Ook? Ook! Ook? Ook. Ook? Ook. Ook! Ook? Ook. Ook? Ook. Ook. Ook. Ook? Ook. Ook. Ook? Ook. Ook? Ook. Ook! Ook! Ook? Ook! Ook. Ook? Ook. Ook? Ook! Ook? Ook! Ook! Ook? Ook. Ook? Ook. Ook. Ook. Ook. Ook? Ook. Ook? Ook? Ook! Ook? Ook. Ook? Ook.'
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
 		when '*brainfuck'
 			case id
+				when 'START','END'
+					return ''
 				when '>'
 					return '>+'*count
 				when '<'
@@ -89,11 +103,15 @@ def _012c(lang,id,count)
 					return ']'*count
 				when '0'
 					return '<[<-]'
+				when 'c'
+					return '>+<[<-]>+<[<-]>->-<[>+<+>+<+>->-<-]>+>+<[<->->-<+>+>+]>->-'
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
 		when 'binaryfuck'
 			case id
+				when 'START','END'
+					return ''
 				when '>'
 					return '010'*count
 				when '<'
@@ -112,6 +130,8 @@ def _012c(lang,id,count)
 					return '111'*count
 				when '0'
 					return '110001111'
+				when 'c'
+					return '010110001111010110001111011011110010000010000011011001111010010110001011011000010010111011011'
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
@@ -163,6 +183,10 @@ def _012c(lang,id,count)
 					return 'exit(0);'
 				when 'X'
 					return 'exit(*p);'
+				when 'c'
+					return '*(p+1)=*p;*(p+2)=*p;'
+				when 'C'
+					return '*(p+1)=*p;'
 				when 'END'
 					return '}'
 				else
@@ -220,6 +244,10 @@ def _012c(lang,id,count)
 					return 'exit(0);'
 				when 'X'
 					return 'exit(*p);'
+				when 'c'
+					return '*(p+1)=*p;*(p+2)=0;'
+				when 'C'
+					return '*(p+1)=*p;'
 				when 'END'
 					return '}'
 				else
@@ -263,6 +291,10 @@ def _012c(lang,id,count)
 					return 'exit;'
 				when 'X'
 					return 'exit(d[p]);'
+				when 'c'
+					return 'd[p+1]=d[p];d[p+2]=0;'
+				when 'C'
+					return 'd[p+1]=d[p];'
 				when 'END'
 					return ''
 			end
