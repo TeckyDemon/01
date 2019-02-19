@@ -26,46 +26,46 @@ def _012c(lang,id,count)
 		when 'blub'
 			case id
 				when '>'
-					return 'Blub. Blub?'
+					return 'Blub. Blub?'*count
 				when '<'
-					return 'Blub? Blub.'
+					return 'Blub? Blub.'*count
 				when '+'
-					return 'Blub. Blub.'
+					return 'Blub. Blub.'*count
 				when '-'
-					return 'Blub! Blub!'
+					return 'Blub! Blub!'*count
 				when '.'
-					return 'Blub! Blub.'
+					return 'Blub! Blub.'*count
 				when ','
-					return 'Blub. Blub!'
+					return 'Blub. Blub!'*count
 				when '['
-					return 'Blub! Blub?'
+					return 'Blub! Blub?'*count
 				when ']'
-					return 'Blub? Blub!'
+					return 'Blub? Blub!'*count
 				when '0'
-					return 'Blub! Blub? Blub! Blub! Blub? Blub!'
+					return 'Blub! Blub? Blub! Blub! Blub? Blub!'*count
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
 		when 'ook!'
 			case id
 				when '>'
-					return 'Ook. Ook?'
+					return 'Ook. Ook?'*count
 				when '<'
-					return 'Ook? Ook.'
+					return 'Ook? Ook.'*count
 				when '+'
-					return 'Ook. Ook.'
+					return 'Ook. Ook.'*count
 				when '-'
-					return 'Ook! Ook!'
+					return 'Ook! Ook!'*count
 				when '.'
-					return 'Ook! Ook.'
+					return 'Ook! Ook.'*count
 				when ','
-					return 'Ook. Ook!'
+					return 'Ook. Ook!'*count
 				when '['
-					return 'Ook! Ook?'
+					return 'Ook! Ook?'*count
 				when ']'
-					return 'Ook? Ook!'
+					return 'Ook? Ook!'*count
 				when '0'
-					return 'Ook! Ook? Ook! Ook! Ook? Ook!'
+					return 'Ook! Ook? Ook! Ook! Ook? Ook!'*count
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
