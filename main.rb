@@ -7,8 +7,7 @@ ERROR_NOT_IMPLEMENTED='Command "%s" not implemented in "%s".'
 ERROR_NOT_SUPPORTED='Language "%s" is not supported.'
 
 def error(e)
-	puts 'Error: %s'%e
-	exit
+	abort('Error: %s'%e)
 end
 def _012c(lang,id,count)
 	case lang
@@ -256,7 +255,7 @@ def _012c(lang,id,count)
 		when 'ruby'
 			case id
 				when 'START'
-					return 'd=[0]*30000;p=0;'
+					return 'd=[0]*3e4;p=0;'
 				when '>'
 					return "p+=#{count};"
 				when '<'
