@@ -63,13 +63,15 @@ Minify \*.zo (see: [file extensions](#file-extensions)) file if possible:
 * \] - if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching \[ command
 * 0 - set the byte at the data pointer to 0
 * 1 - set the data pointer to 0
+* x - exit the program with the exit code 0
+* X - exit the program with the exit code equal to the byte at the data pointer
 
 ## Supported languages
 
 * Brainfuck (some commands are not implemented)
 * C
-* C++
-* Ruby (more complicated program may not work)
+* C++ (more complicated programs may not work)
+* Ruby (more complicated programs may not work)
 
 ## File extensions
 
@@ -84,7 +86,7 @@ Hello World:
 
 ## Authors
 
-* **Michał Wróblewski** - Main Developer - [DeBos99](https://github.com/DeBos99)
+* **Michał "DeBos" Wróblewski** - Main Developer - [DeBos99](https://github.com/DeBos99)
 
 ## License
 
