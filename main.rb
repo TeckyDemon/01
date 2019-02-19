@@ -1,7 +1,7 @@
 require 'securerandom'
 require 'optparse'
 
-COMMANDS=['>','<','+','-','.',',','[',']','0','1','x','X','c','C']
+COMMANDS=['>','<','+','-','.',',','[',']','0','1','x','X','c','C','m']
 
 ERROR_NOT_IMPLEMENTED='Command "%s" not implemented in "%s".'
 ERROR_NOT_SUPPORTED='Language "%s" is not supported.'
@@ -23,6 +23,8 @@ def _012c(lang,id,count)
 					return '[-]'
 				when 'c'
 					return '>[-]>[-]<<[>+>+<<-]>>[-<<+>>]<<'
+				when 'm'
+					return '[>+<-]'
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
@@ -50,6 +52,8 @@ def _012c(lang,id,count)
 					return 'Blub! Blub? Blub! Blub! Blub? Blub!'
 				when 'c'
 					return 'Blub. Blub? Blub! Blub? Blub! Blub! Blub? Blub! Blub. Blub? Blub! Blub? Blub! Blub! Blub? Blub! Blub? Blub. Blub? Blub. Blub! Blub? Blub. Blub? Blub. Blub. Blub. Blub? Blub. Blub. Blub? Blub. Blub? Blub. Blub! Blub! Blub? Blub! Blub. Blub? Blub. Blub? Blub! Blub? Blub! Blub! Blub? Blub. Blub? Blub. Blub. Blub. Blub. Blub? Blub. Blub? Blub? Blub! Blub? Blub. Blub? Blub.'
+				when 'm'
+					return 'Blub! Blub? Blub. Blub? Blub. Blub. Blub? Blub. Blub! Blub! Blub? Blub!'
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
@@ -77,6 +81,8 @@ def _012c(lang,id,count)
 					return 'Ook! Ook? Ook! Ook! Ook? Ook!'
 				when 'c'
 					return 'Ook. Ook? Ook! Ook? Ook! Ook! Ook? Ook! Ook. Ook? Ook! Ook? Ook! Ook! Ook? Ook! Ook? Ook. Ook? Ook. Ook! Ook? Ook. Ook? Ook. Ook. Ook. Ook? Ook. Ook. Ook? Ook. Ook? Ook. Ook! Ook! Ook? Ook! Ook. Ook? Ook. Ook? Ook! Ook? Ook! Ook! Ook? Ook. Ook? Ook. Ook. Ook. Ook. Ook? Ook. Ook? Ook? Ook! Ook? Ook. Ook? Ook.'
+				when 'm'
+					return 'Ook! Ook? Ook. Ook? Ook. Ook. Ook? Ook. Ook! Ook! Ook? Ook!'
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
@@ -104,6 +110,8 @@ def _012c(lang,id,count)
 					return '<[<-]'
 				when 'c'
 					return '>+<[<-]>+<[<-]>->-<[>+<+>+<+>->-<-]>+>+<[<->->-<+>+>+]>->-'
+				when 'm'
+					return '<[>+<+>-<-]'
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
@@ -131,6 +139,8 @@ def _012c(lang,id,count)
 					return '110001111'
 				when 'c'
 					return '010110001111010110001111011011110010000010000011011001111010010110001011011000010010111011011'
+				when 'm'
+					return '110010000011001111'
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
@@ -187,9 +197,11 @@ def _012c(lang,id,count)
 				when 'X'
 					return 'exit(*p);'
 				when 'c'
-					return '*(p+1)=*p;*(p+2)=*p;'
+					return '*(p+1)=*p;*(p+2)=0;'
 				when 'C'
 					return '*(p+1)=*p;'
+				when 'm'
+					return '*(p+1)=*p;*p=0;'
 				when 'END'
 					return '}'
 				else
@@ -251,6 +263,8 @@ def _012c(lang,id,count)
 					return '*(p+1)=*p;*(p+2)=0;'
 				when 'C'
 					return '*(p+1)=*p;'
+				when 'm'
+					return '*(p+1)=*p;*p=0;'
 				when 'END'
 					return '}'
 				else
@@ -298,6 +312,8 @@ def _012c(lang,id,count)
 					return 'd[p+1]=d[p];d[p+2]=0;'
 				when 'C'
 					return 'd[p+1]=d[p];'
+				when 'm'
+					return 'd[p+1]=d[p];d[p]=0;'
 				when 'END'
 					return ''
 			end
