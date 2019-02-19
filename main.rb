@@ -234,9 +234,9 @@ def _012c(lang,id,count)
 				when '<'
 					return "p-=#{count};"
 				when '+'
-					return "d[p]+=#{count};"
+					return "d[p]+=d[p]+#{count}<256?#{count}:-d[p];"
 				when '-'
-					return "d[p]-=#{count};"
+					return "d[p]-=d[p]-#{count}>=0?#{count}:d[p]-255;"
 				when '.'
 					if count==1 then
 						return 'print d[p].chr;'
