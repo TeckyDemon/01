@@ -74,6 +74,8 @@ Minify \*.zo (see: [file extensions](#file-extensions)) file if possible:
 * Ruby (more complicated programs may not work)
 * Blub (some commands are not implemented)
 * Ook! (some commands are not implemented)
+* \*brainfuck (some commands are not implemented)
+* Binaryfuck (some commands are not implemented)
 
 ## File extensions
 
