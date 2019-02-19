@@ -42,7 +42,7 @@ def _012c(lang,id,count)
 				when ']'
 					return 'Blub? Blub!'*count
 				when '0'
-					return 'Blub! Blub? Blub! Blub! Blub? Blub!'*count
+					return 'Blub! Blub? Blub! Blub! Blub? Blub!'
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
@@ -65,7 +65,53 @@ def _012c(lang,id,count)
 				when ']'
 					return 'Ook? Ook!'*count
 				when '0'
-					return 'Ook! Ook? Ook! Ook! Ook? Ook!'*count
+					return 'Ook! Ook? Ook! Ook! Ook? Ook!'
+				else
+					error(ERROR_NOT_IMPLEMENTED%[id,lang])
+			end
+		when '*brainfuck'
+			case id
+				when '>'
+					return '>+'*count
+				when '<'
+					return '>-'*count
+				when '+'
+					return '<+'*count
+				when '-'
+					return '<-'*count
+				when '.'
+					return '<.'*count
+				when ','
+					return '<,'*count
+				when '['
+					return '<['*count
+				when ']'
+					return ']'*count
+				when '0'
+					return '<[<-]'
+				else
+					error(ERROR_NOT_IMPLEMENTED%[id,lang])
+			end
+		when 'binaryfuck'
+			case id
+				when '>'
+					return '010'*count
+				when '<'
+					return '011'*count
+				when '+'
+					return '000'*count
+				when '-'
+					return '001'*count
+				when '.'
+					return '100'*count
+				when ','
+					return '101'*count
+				when '['
+					return '110'*count
+				when ']'
+					return '111'*count
+				when '0'
+					return '110001111'
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
