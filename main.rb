@@ -163,12 +163,16 @@ def _012c(lang,id,count)
 						return "(*p)-=#{count};"
 					end
 				when '.'
-					return 'putchar(*p);'*count
+					if count<=2 then
+						return 'putchar(*p);'*count
+					else
+						return "for(int i=#{count};i--;)putchar(*p);"
+					end
 				when ','
 					if count<=2 then
 						return 'scanf(\" %c\",&p);'*count
 					else
-						return "for(int i=0;i<#{count};i++)scanf(\" %c\",p);"
+						return "for(int i=#{count};i--;)scanf(\" %c\",p);"
 					end
 				when '['
 					return 'while(*p){'*count
@@ -229,7 +233,7 @@ def _012c(lang,id,count)
 					if count<=2 then
 						return 'std::cin>>*p;'*count
 					else
-						return "for(int i=0;i<#{count};i++)std::cin>>*p;"
+						return "for(int i=#{count};i--;)std::cin>>*p;"
 					end
 				when '['
 					return 'while(*p){'*count
