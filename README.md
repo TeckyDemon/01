@@ -34,17 +34,21 @@ Help:
 
 `$ main.rb --help`
 
-Compile \*.zo (see: [file extensions](#file-extensions)) file to other language source file (see: [supported languages](#supported-languages)):
+Convert \*.zo (see: [file extensions](#file-extensions)) file to other language source file (see: [supported languages](#supported-languages)):
 
-`$ main.rb --convert LANG --input INPUT --output OUTPUT`
+`$ main.rb --convert <language> --input <input> --output <output>`
 
 Convert \*.tzo (see: [file extensions](#file-extensions)) file to \*.zo (see: [file extensions](#file-extensions)) file:
 
-`$ main.rb --generate LANG --input INPUT --output OUTPUT`
+`$ main.rb --generate --input <input> --output <output>`
 
-Minify \*.zo (see: [file extensions](#file-extensions)) file if possible:
+Minify \*.zo (see: [file extensions](#file-extensions)) file:
 
-`$ main.rb --minify --input INPUT --output OUTPUT`
+`$ main.rb --minify --input <input> --output <output>`
+
+Convert \*.zo file to hex:
+
+`$ main.rb --hex --input <input> --output <output>`
 
 ## Instructions
 
