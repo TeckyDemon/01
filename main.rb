@@ -171,7 +171,7 @@ def _012c(lang,id,count)
 		when 'c++'
 			case id
 				when 'START'
-					return "#include <iostream>\nmain(){char d[30000],*p=d;"
+					return "#include <iostream>\nmain(){unsigned char d[30000],*p=d;"
 				when '>'
 					if count==1 then
 						return '++p;'
