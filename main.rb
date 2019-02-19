@@ -23,6 +23,44 @@ def _012c(lang,id,count)
 				else
 					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
+		when 'blub'
+			case id
+				when '>'
+					return 'Blub. Blub?'
+				when '<'
+					return 'Blub? Blub.'
+				when '+'
+					return 'Blub. Blub.'
+				when '-'
+					return 'Blub! Blub!'
+				when '.'
+					return 'Blub! Blub.'
+				when ','
+					return 'Blub. Blub!'
+				when '['
+					return 'Blub! Blub?'
+				when ']'
+					return 'Blub? Blub!'
+			end
+		when 'ook!'
+			case id
+				when '>'
+					return 'Ook. Ook?'
+				when '<'
+					return 'Ook? Ook.'
+				when '+'
+					return 'Ook. Ook.'
+				when '-'
+					return 'Ook! Ook!'
+				when '.'
+					return 'Ook! Ook.'
+				when ','
+					return 'Ook. Ook!'
+				when '['
+					return 'Ook! Ook?'
+				when ']'
+					return 'Ook? Ook!'
+			end
 		when 'c'
 			case id
 				when 'START'
