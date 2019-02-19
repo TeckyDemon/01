@@ -274,7 +274,7 @@ def _012(input,output,lang)
 	id=0
 	last=''
 	count=0
-	File.open(output,'w') do |f2|
+	File.open(output,'w+') do |f2|
 		f2<<_012c(lang,'START',0)
 		File.open(input,'r') do |f|
 			while not f.eof?
@@ -303,7 +303,7 @@ end
 def _201(input,output)
 	last=0
 	File.open(input,'r') do |f|
-		File.open(output,'w') do |f2|
+		File.open(output,'w+') do |f2|
 			while not f.eof?
 				c=f.read(1)
 				if not COMMANDS.include?(c) then
@@ -327,27 +327,36 @@ def minify(input,output)
 	_201(pipe,output)
 	File.delete(pipe)
 end
+def to_hex(input,output)
+	File.open(output,'w+').write(File.open(input,'r').read().to_i(2).to_s(16).upcase)
+end
 
 OptionParser.new do |parser|
 	options={}
 	parser.on('-i','--input INPUT','Set INPUT file for program'){|x|options[:input]=x}
 	parser.on('-o','--output OUTPUT','Set OUTPUT file for program'){|x|options[:output]=x}
-	parser.on('-m', '--minify', 'Minify INPUT and get result in OUTPUT') do |x|
+	parser.on('-m','--minify','Minify INPUT and get result in OUTPUT') do |x|
 		if not options[:input] or not options[:output] then
 			raise OptionParser::MissingArgument
 		end
 		minify(options[:input],options[:output])
 	end
-	parser.on('-c', '--convert LANG', 'Convert *.zo file to other LANG file') do |x|
+	parser.on('-c','--convert LANG','Convert *.zo file to other LANG file') do |x|
 		if not options[:input] or not options[:output] then
 			raise OptionParser::MissingArgument
 		end
 		_012(options[:input],options[:output],x)
 	end
-	parser.on('-g', '--generate', 'Convert *.tzo to *.zo file') do |x|
+	parser.on('-g','--generate','Convert *.tzo to *.zo file') do |x|
 		if not options[:input] or not options[:output] then
 			raise OptionParser::MissingArgument
 		end
 		_201(options[:input],options[:output])
+	end
+	parser.on('-h','--hex','Convert *.zo file to hex') do |x|
+		if not options[:input] or not options[:output] then
+			raise OptionParser::MissingArgument
+		end
+		to_hex(options[:input],options[:output])
 	end
 end.parse!
