@@ -72,6 +72,8 @@ Minify \*.zo (see: [file extensions](#file-extensions)) file if possible:
 * C
 * C++ (more complicated programs may not work)
 * Ruby (more complicated programs may not work)
+* Blub (some commands are not implemented)
+* Ook! (some commands are not implemented)
 
 ## File extensions
 
