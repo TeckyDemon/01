@@ -1,7 +1,7 @@
 require 'securerandom'
 require 'optparse'
 
-COMMANDS=['>','<','+','-','.',',','[',']','0','1']
+COMMANDS=['>','<','+','-','.',',','[',']','0','1','x','X']
 
 ERROR_NOT_IMPLEMENTED='Command "%s" not implemented in "%s".'
 ERROR_NOT_SUPPORTED='Language "%s" is not supported.'
@@ -26,7 +26,7 @@ def _012c(lang,id,count)
 		when 'c'
 			case id
 				when 'START'
-					return "#include<stdio.h>\nmain(){char d[30000],*p=d;"
+					return "#include<stdio.h>#include<stdlib.h>\nmain(){char d[30000],*p=d;"
 				when '>'
 					if count==1 then
 						return '++p;'
@@ -67,6 +67,10 @@ def _012c(lang,id,count)
 					return '*p=0;'
 				when '1'
 					return 'p=d[0];'
+				when 'x'
+					return 'exit(0);'
+				when 'X'
+					return 'exit(*p);'
 				when 'END'
 					return '}'
 				else
@@ -120,6 +124,10 @@ def _012c(lang,id,count)
 					return '*p=0;'
 				when '1'
 					return 'p=d[0];'
+				when 'x'
+					return 'exit(0);'
+				when 'X'
+					return 'exit(*p);'
 				when 'END'
 					return '}'
 				else
@@ -159,6 +167,10 @@ def _012c(lang,id,count)
 					return 'd[p]=0;'
 				when '1'
 					return 'p=0;'
+				when 'x'
+					return 'exit;'
+				when 'X'
+					return 'exit(d[p]);'
 				when 'END'
 					return ''
 			end
