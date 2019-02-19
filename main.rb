@@ -335,13 +335,7 @@ OptionParser.new do |parser|
 	options={}
 	parser.on('-i','--input INPUT','Set INPUT file for program'){|x|options[:input]=x}
 	parser.on('-o','--output OUTPUT','Set OUTPUT file for program'){|x|options[:output]=x}
-	parser.on('-m','--minify','Minify INPUT and get result in OUTPUT') do |x|
-		if not options[:input] or not options[:output] then
-			raise OptionParser::MissingArgument
-		end
-		minify(options[:input],options[:output])
-	end
-	parser.on('-c','--convert LANG','Convert *.zo file to other LANG file') do |x|
+	parser.on('-c','--convert LANG','Convert *.zo file to other language source file') do |x|
 		if not options[:input] or not options[:output] then
 			raise OptionParser::MissingArgument
 		end
@@ -352,6 +346,12 @@ OptionParser.new do |parser|
 			raise OptionParser::MissingArgument
 		end
 		_201(options[:input],options[:output])
+	end
+	parser.on('-m','--minify','Minify \*.zo file') do |x|
+		if not options[:input] or not options[:output] then
+			raise OptionParser::MissingArgument
+		end
+		minify(options[:input],options[:output])
 	end
 	parser.on('-h','--hex','Convert *.zo file to hex') do |x|
 		if not options[:input] or not options[:output] then
