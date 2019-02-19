@@ -69,7 +69,7 @@ Convert \*.zo file to hex:
 * 1 - set the data pointer to 0
 * x - exit the program with the exit code 0
 * X - exit the program with the exit code equal to the byte at the data pointer
-* c - copy the byte at the data pointer to next cell (next 2 cells should be empty)
+* c - copy the byte at the data pointer to next cell (next 2 cells will be cleared first)
 * C - copy the byte at the data pointer to next cell
 
 ## Supported languages
