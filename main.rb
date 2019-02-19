@@ -41,6 +41,10 @@ def _012c(lang,id,count)
 					return 'Blub! Blub?'
 				when ']'
 					return 'Blub? Blub!'
+				when '0'
+					return 'Blub! Blub? Blub! Blub! Blub? Blub!'
+				else
+					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
 		when 'ook!'
 			case id
@@ -60,6 +64,10 @@ def _012c(lang,id,count)
 					return 'Ook! Ook?'
 				when ']'
 					return 'Ook? Ook!'
+				when '0'
+					return 'Ook! Ook? Ook! Ook! Ook? Ook!'
+				else
+					error(ERROR_NOT_IMPLEMENTED%[id,lang])
 			end
 		when 'c'
 			case id
