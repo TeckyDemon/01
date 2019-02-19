@@ -74,7 +74,7 @@ Convert \*.zo file to hex:
 
 * Brainfuck (some commands are not implemented)
 * C
-* C++ (more complicated programs may not work)
+* C++
 * Ruby (more complicated programs may not work)
 * Blub (some commands are not implemented)
 * Ook! (some commands are not implemented)
