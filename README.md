@@ -22,6 +22,14 @@ $ sudo apt install ruby -y
 $ sudo gem install securerandom
 ```
 
+### MacOS
+
+```
+$ brew update && brew upgrade
+$ brew install ruby
+$ gem install securerandom
+```
+
 ## Installation
 
 Clone this repository:
