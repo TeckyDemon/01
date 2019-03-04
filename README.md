@@ -65,21 +65,23 @@ Convert \*.zo file to hex:
 
 ## Commands
 
-* \> - increment the data pointer
-* < - decrement the data pointer
-* \+ - increment the byte at the data pointer
-* \- - decrement the byte at the data pointer
-* . - output the byte at the data pointer
-* , - accept one byte of input, storing its value in the byte at the data pointer.
-* \[ - if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching \] command
-* \] - if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching \[ command
-* 0 - set the byte at the data pointer to 0
-* 1 - set the data pointer to 0
-* x - exit the program with the exit code 0
-* X - exit the program with the exit code equal to the byte at the data pointer
-* c - copy the byte at the data pointer to next cell (next 2 cells will be cleared first)
-* C - copy the byte at the data pointer to next cell
-* m - move the byte at the data pointer to next cell
+| Command | Description                                                                  |
+| :---    | :---                                                                         |
+| >       | Increments the data pointer.                                                 |
+| <       | Decrements the data pointer.                                                 |
+| +       | Increments the byte at the data pointer.                                     |
+| -       | Decrements the byte at the data pointer.                                     |
+| .       | Outputs the byte at the data pointer.                                        |
+| ,       | Accepts one byte of input, stores its value in the byte at the data pointer. |
+| \[      | If the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching ] command.                                     |
+| ]      | If the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching \[ command.                                    |
+| 0      | Sets the byte at the data pointer to 0.                                       |
+| 1      | Sets the data pointer to 0.                                                   |
+| x      | Exits the program with the exit code 0.                                       |
+| X      | Exits the program with the exit code equal to the byte at the data pointer.   |
+| c      | Clears next 2 cells and copies the byte at the data pointer to next cell.     |
+| C      | Copies the byte at the data pointer to next cell.                             |
+| m      | Moves the byte at the data pointer to next cell.                              |
 
 ## Supported languages
 
