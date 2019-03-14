@@ -14,10 +14,20 @@ Install required gems:
 
 ### Linux
 
+#### APT
+
 ```
 $ sudo apt update && sudo apt upgrade -y
 $ sudo apt install ruby -y
-$ sudo gem install securerandom
+$ gem install securerandom
+```
+
+#### Pacman
+
+```
+$ sudo pacman -Syu --noconfirm
+$ sudo pacman -S ruby --noconfirm
+$ gem install securerandom
 ```
 
 ### MacOS
