@@ -2,6 +2,27 @@
 
 **01** is an esoteric programming language with only 2 instructions.
 
+## Content
+
+- [Content](#content)
+- [Prerequisites](#prerequisites)
+  - [Windows](#windows)
+  - [Linux](#linux)
+    - [APT](#apt)
+    - [Pacman](#pacman)
+  - [MacOS](#macos)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Documentation](#documentation)
+  - [Instructions](#instructions)
+  - [Commands](#commands)
+- [Supported languages](#supported-languages)
+- [File extensions](#file-extensions)
+- [Example program](#example-program)
+- [TODO](#todo)
+- [Authors](#authors)
+- [License](#license)
+
 ## Prerequisites
 
 ### Windows
@@ -66,12 +87,14 @@ Convert \*.zo file to hex:
 
 `$ main.rb --hex --input <input> --output <output>`
 
-## Instructions
+## Documentation
+
+### Instructions
 
 * 0 - increment command pointer (if pointer is equal to the number of instructions it is set to 0)
 * 1 - push command on stack (see [commands](#commands))
 
-## Commands
+### Commands
 
 | Command | Description                                                                  |
 | :---    | :---                                                                         |
