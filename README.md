@@ -29,63 +29,61 @@
 
 Install Ruby: https://rubyinstaller.org/
 
-Install required gems:
-
-`$ gem install securerandom`
+`gem install securerandom`
 
 ### Linux
 
 #### APT
 
 ```
-$ sudo apt update && sudo apt upgrade -y
-$ sudo apt install ruby -y
-$ gem install securerandom
+sudo apt update && sudo apt upgrade -y
+sudo apt install ruby -y
+gem install securerandom
 ```
 
 #### Pacman
 
 ```
-$ sudo pacman -Syu --noconfirm
-$ sudo pacman -S ruby --noconfirm
-$ gem install securerandom
+sudo pacman -Syu --noconfirm
+sudo pacman -S ruby --noconfirm
+gem install securerandom
 ```
 
 ### MacOS
 
 ```
-$ brew update && brew upgrade
-$ brew install ruby
-$ gem install securerandom
+brew update && brew upgrade
+brew install ruby
+gem install securerandom
 ```
 
 ## Installation
 
 Clone this repository:
 
-`$ git clone "https://github.com/DeBos99/01.git"`
+`git clone "https://github.com/DeBos99/01.git"`
 
 ## Usage
 
 Help:
 
-`$ main.rb --help`
+`main.rb --help`
 
 Convert \*.zo (see: [file extensions](#file-extensions)) file to other language source file (see: [supported languages](#supported-languages)):
 
-`$ main.rb --convert <language> --input <input> --output <output>`
+`main.rb --convert <language> --input <input> --output <output>`
 
 Convert \*.tzo (see: [file extensions](#file-extensions)) file to \*.zo (see: [file extensions](#file-extensions)) file:
 
-`$ main.rb --generate --input <input> --output <output>`
+`main.rb --generate --input <input> --output <output>`
 
 Minify \*.zo (see: [file extensions](#file-extensions)) file:
 
-`$ main.rb --minify --input <input> --output <output>`
+`main.rb --minify --input <input> --output <output>`
 
 Convert \*.zo file to hex:
 
-`$ main.rb --hex --input <input> --output <output>`
+`main.rb --hex --input <input> --output <output>`
 
 ## Documentation
 
