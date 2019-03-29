@@ -29,8 +29,6 @@
 
 Install Ruby: https://rubyinstaller.org/
 
-`gem install securerandom`
-
 ### Linux
 
 #### APT
@@ -59,9 +57,20 @@ gem install securerandom
 
 ## Installation
 
-Clone this repository:
+### Windows
 
-`git clone "https://github.com/DeBos99/01.git"`
+```
+git clone "https://github.com/DeBos99/01.git"
+cd 01
+install.bat
+cd ..
+```
+
+### Linux & MacOS
+
+```
+git clone "https://github.com/DeBos99/01.git"
+```
 
 ## Usage
 
