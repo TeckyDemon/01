@@ -6,12 +6,10 @@
 
 - [Content](#content)
 - [Prerequisites](#prerequisites)
-  - [Windows](#windows)
-  - [Linux](#linux)
-    - [APT](#apt)
-    - [Pacman](#pacman)
-  - [MacOS](#macos)
+  - [Windows](#Prerequisites-Windows)
 - [Installation](#installation)
+  - [Windows](#Installation-Windows)
+  - [Linux & MacOS](#Linux&MacOS)
 - [Usage](#usage)
 - [Documentation](#documentation)
   - [Instructions](#instructions)
@@ -25,39 +23,13 @@
 
 ## Prerequisites
 
-### Windows
+### <a name="Prerequisites-Windows">Windows
 
 Install Ruby: https://rubyinstaller.org/
 
-### Linux
-
-#### APT
-
-```
-sudo apt update && sudo apt upgrade -y
-sudo apt install ruby -y
-gem install securerandom
-```
-
-#### Pacman
-
-```
-sudo pacman -Syu --noconfirm
-sudo pacman -S ruby --noconfirm
-gem install securerandom
-```
-
-### MacOS
-
-```
-brew update && brew upgrade
-brew install ruby
-gem install securerandom
-```
-
 ## Installation
 
-### Windows
+### <a name="Installation-Windows">Windows
 
 ```
 git clone "https://github.com/DeBos99/01.git"
@@ -66,10 +38,14 @@ install.bat
 cd ..
 ```
 
-### Linux & MacOS
+### <a name="Linux&MacOS">Linux & MacOS
 
 ```
 git clone "https://github.com/DeBos99/01.git"
+cd 01
+sudo chmod +x install.sh
+sudo ./install.sh
+cd ..
 ```
 
 ## Usage
