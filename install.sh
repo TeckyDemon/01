@@ -25,7 +25,7 @@ case "$(uname -s)" in
 			$install ruby
       			gem install securerandom
 		EOT
-    )
+		)
 		;;
 	Darwin)
 		commands=$(cat<<-EOT
