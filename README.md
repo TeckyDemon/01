@@ -43,7 +43,6 @@ cd ..
 ```
 git clone "https://github.com/DeBos99/01.git"
 cd 01
-sudo chmod +x install.sh
 sudo ./install.sh
 cd ..
 ```
