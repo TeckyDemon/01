@@ -9,27 +9,22 @@ case "$(uname -s)" in
 	Linux)
 		if [[ ! -z "$(which apt 2>/dev/null)" ]]; then
 			install="sudo apt install -y"
-			commands=$(cat<<-EOT
-				sudo apt update -y && sudo apt upgrade -y
-				sudo apt install ruby -y
-			EOT
+			commands="sudo apt update -y && sudo apt upgrade -y"
 			)
 		elif [[ ! -z "$(which pacman 2>/dev/null)" ]]; then
 			install="sudo pacman -S --noconfirm"
-			commands=$(cat<<-EOT
-				sudo pacman -Syu --noconfirm
-				sudo pacman -S ruby --noconfirm
-			EOT
+			commands="sudo pacman -Syu --noconfirm"
 			)
 		else
 			echo "Can't find package manager."
 			exit 1
 		fi
 
-    commands=$(cat<<-EOT
-      $commands
-      gem install securerandom
-    EOT
+		commands=$(cat<<-EOT
+			$commands
+			$install ruby
+      			gem install securerandom
+		EOT
     )
 		;;
 	Darwin)
