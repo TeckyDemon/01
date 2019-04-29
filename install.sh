@@ -23,7 +23,7 @@ case "$(uname -s)" in
 		commands=$(cat<<-EOT
 			$commands
 			$install ruby
-      			gem install securerandom
+			gem install securerandom
 		EOT
 		)
 		;;
