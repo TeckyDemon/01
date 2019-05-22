@@ -17,8 +17,8 @@
 - [Supported languages](#supported-languages)
 - [File extensions](#file-extensions)
 - [Example program](#example-program)
-- [TODO](#todo)
 - [Authors](#authors)
+- [Contact](#contact)
 - [License](#license)
 
 ## Prerequisites
@@ -118,14 +118,13 @@ Hello World:
 
 `00111111110000100001001111000010000100110000000010011100000000100111000000001001000000000111100100001000100100000000100100000000100010000000110010000100000100000010000100100001000110000100000010001110100000000111111100110000000011100100000011000010000000100101000000010001000000001110010000000001111110100000000011111111010000001100100100000010011001`
 
-## TODO
-
-* Optimize code.
-* Add support for more languages.
-
 ## Authors
 
 * **Michał Wróblewski** - Main Developer - [DeBos99](https://github.com/DeBos99)
+
+## Contact
+
+Discord: DeBos#3292
 
 ## License
 
