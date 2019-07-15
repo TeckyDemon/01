@@ -26,13 +26,17 @@
 ## Content
 
 - [Content](#content)
-- [Prerequisites](#prerequisites)
-  - [Windows](#Prerequisites-Windows)
 - [Installation](#installation)
-  - [Windows](#Installation-Windows)
-  - [Linux & MacOS](#Linux&MacOS)
+  - [Windows](#windows)
+  - [Unix](#unix)
+    - [Debian/Ubuntu](#apt)
+    - [Arch Linux/Manjaro](#pacman)
+    - [CentOS](#yum)
+    - [MacOS](#homebrew)
 - [Usage](#usage)
 - [Documentation](#documentation)
+  - [Required arguments](#required-arguments)
+  - [Optional arguments](#optional-arguments)
   - [Instructions](#instructions)
   - [Commands](#commands)
 - [Supported languages](#supported-languages)
@@ -42,16 +46,13 @@
 - [Contact](#contact)
 - [License](#license)
 
-## Prerequisites
-
-### <a name="Prerequisites-Windows">Windows
-
-Install Ruby: https://rubyinstaller.org/
-
 ## Installation
 
-### <a name="Installation-Windows">Windows
+### Windows
 
+* Install [Git](https://git-scm.com/download/win).
+* Install [Ruby](https://rubyinstaller.org/downloads/).
+* Run following commands in the command prompt:
 ```
 git clone "https://github.com/DeBos99/01.git"
 cd 01
@@ -59,9 +60,46 @@ install.bat
 cd ..
 ```
 
-### <a name="Linux&MacOS">Linux & MacOS
+### Unix
 
+#### <a name="APT">Debian/Ubuntu based
+
+* Run following commands in the terminal:
 ```
+sudo apt install git ruby -y
+git clone "https://github.com/DeBos99/01.git"
+cd 01
+sudo ./install.sh
+cd ..
+```
+
+#### <a name="Pacman">Arch Linux/Manjaro
+
+* Run following commands in the terminal:
+```
+sudo pacman -S git ruby --noconfirm
+git clone "https://github.com/DeBos99/01.git"
+cd 01
+sudo ./install.sh
+cd ..
+```
+
+#### <a name="YUM">CentOS
+
+* Run following commands in the terminal:
+```
+sudo yum install git ruby -y
+git clone "https://github.com/DeBos99/01.git"
+cd 01
+sudo ./install.sh
+cd ..
+```
+
+#### <a name="Homebrew">MacOS
+
+* Run following commands in the terminal:
+```
+brew install git ruby
 git clone "https://github.com/DeBos99/01.git"
 cd 01
 sudo ./install.sh
@@ -70,68 +108,72 @@ cd ..
 
 ## Usage
 
-Help:
-
-`main.rb --help`
-
-Convert \*.zo (see: [file extensions](#file-extensions)) file to other language source file (see: [supported languages](#supported-languages)):
-
-`main.rb --convert <language> --input <input> --output <output>`
-
-Convert \*.tzo (see: [file extensions](#file-extensions)) file to \*.zo (see: [file extensions](#file-extensions)) file:
-
-`main.rb --generate --input <input> --output <output>`
-
-Minify \*.zo (see: [file extensions](#file-extensions)) file:
-
-`main.rb --minify --input <input> --output <output>`
-
-Convert \*.zo file to hex:
-
-`main.rb --hex --input <input> --output <output>`
+`ruby main.rb ARGUMENTS`
 
 ## Documentation
 
+### Required arguments
+
+| Argument                 | Description                                   |
+| :----------------------- | :-------------------------------------------- |
+| -i PATH<br>--input PATH  | Sets the path of the input file to **PATH**.  |
+| -o PATH<br>--output PATH | Sets the path of the output file to **PATH**. |
+
+### Optional arguments
+
+| Argument                  | Description                           |
+| :------------------------ | :------------------------------------ |
+| -c LANG<br>--convert LANG | Sets the output language to **LANG**. |
+| -g<br>--generate          | Converts *.tzo file to *.zo file.     |
+| -m<br>--minify            | Minifies *.zo file.                   |
+| -h<br>--hex               | Converts *.zo file to hex.            |
+
 ### Instructions
 
-* 0 - increment command pointer (if pointer is equal to the number of instructions it is set to 0)
-* 1 - push command on stack (see [commands](#commands))
+| Instruction | Description                                                                                   |
+| :----------:| :-------------------------------------------------------------------------------------------- |
+| 0           | Increments command pointer. If pointer is equal to the number of instructions it is set to 0. |
+| 1           | Pushes command on stack.                                                                      |
 
 ### Commands
 
-| Command | Description                                                                  |
-| :---    | :---                                                                         |
-| >       | Increments the data pointer.                                                 |
-| <       | Decrements the data pointer.                                                 |
-| +       | Increments the byte at the data pointer.                                     |
-| -       | Decrements the byte at the data pointer.                                     |
-| .       | Outputs the byte at the data pointer.                                        |
-| ,       | Accepts one byte of input, stores its value in the byte at the data pointer. |
-| \[      | If the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching ] command.                                     |
-| ]      | If the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching \[ command.                                    |
-| 0      | Sets the byte at the data pointer to 0.                                       |
-| 1      | Sets the data pointer to 0.                                                   |
-| x      | Exits the program with the exit code 0.                                       |
-| X      | Exits the program with the exit code equal to the byte at the data pointer.   |
-| c      | Clears next 2 cells and copies the byte at the data pointer to next cell.     |
-| C      | Copies the byte at the data pointer to next cell.                             |
-| m      | Moves the byte at the data pointer to next cell.                              |
+| Command | Description                                                                                                                                                                        |
+| :-----: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| >       | Increments the data pointer.                                                                                                                                                       |
+| <       | Decrements the data pointer.                                                                                                                                                       |
+| +       | Increments the byte at the data pointer.                                                                                                                                           |
+| -       | Decrements the byte at the data pointer.                                                                                                                                           |
+| .       | Outputs the byte at the data pointer.                                                                                                                                              |
+| ,       | Accepts one byte of input, stores its value in the byte at the data pointer.                                                                                                       |
+| \[      | If the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching ] command.  |
+| ]       | If the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching \[ command. |
+| 0       | Sets the byte at the data pointer to 0.                                                                                                                                            |
+| 1       | Sets the data pointer to 0.                                                                                                                                                        |
+| x       | Exits the program with the exit code 0.                                                                                                                                            |
+| X       | Exits the program with the exit code equal to the byte at the data pointer.                                                                                                        |
+| c       | Clears next 2 cells and copies the byte at the data pointer to next cell.                                                                                                          |
+| C       | Copies the byte at the data pointer to next cell.                                                                                                                                  |
+| m       | Moves the byte at the data pointer to next cell.                                                                                                                                   |
 
 ## Supported languages
 
-* Brainfuck (some commands are not implemented)
-* C
-* C++
-* Ruby
-* Blub (some commands are not implemented)
-* Ook! (some commands are not implemented)
-* \*brainfuck (some commands are not implemented)
-* Binaryfuck (some commands are not implemented)
+| Language   | Fully implemented  |
+| :--------: | :----------------: |
+| Brainfuck  | :x:                |
+| C          | :heavy_check_mark: |
+| C++        | :heavy_check_mark: |
+| Ruby       | :heavy_check_mark: |
+| Blub       | :x:                |
+| Ook!       | :x:                |
+| *brainfuck | :x:                |
+| Binaryfuck | :x:                |
 
 ## File extensions
 
-* .zo - 01 source file with instructions
-* .tzo - 01 source file with commands
+| Extension | Description                       |
+| :-------: | :-------------------------------- |
+| .zo       | 01 source file with instructions. |
+| .tzo      | 01 source file with commands.     |
 
 ## Example program
 
