@@ -19,12 +19,6 @@ case "$(uname -s)" in
 		fi
 		commands=$(cat<<-EOT
 			$commands
-			$install python
-		EOT
-		)
-
-		commands=$(cat<<-EOT
-			$commands
 			$install ruby
 			gem install securerandom
 		EOT

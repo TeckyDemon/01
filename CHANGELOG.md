@@ -2,7 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.26] - 2019-07-21
+## [2.1.27] - 2019-07-23
+
+### Added
+
+- `VERSION` file.
+
+### Changed
+
+##### [CHANGELOG.md](CHANGELOG.md)
+
+- Version.
+
+### Fixed
+
+##### [install.sh](install.sh)
+
+- Installation commands.
+
+## [2.1.26] - 2019-07-21
 
 ### Fixed
 
@@ -14,7 +32,7 @@ All notable changes to this project will be documented in this file.
 
 - Typo.
 
-## [1.1.25] - 2019-07-15
+## [2.1.25] - 2019-07-15
 
 ### Added
 
@@ -30,13 +48,13 @@ All notable changes to this project will be documented in this file.
 
 - `Prerequisites` section.
 
-## [1.1.24] - 2019-06-26
+## [2.1.24] - 2019-06-26
 
 ### Added
 
 - [CHANGELOG.md](CHANGELOG.md) file.
 
-## [1.1.23] - 2019-06-20
+## [2.1.23] - 2019-06-20
 
 ### Added
 
@@ -44,7 +62,7 @@ All notable changes to this project will be documented in this file.
 
 - Support for `yum`.
 
-## [1.1.22] - 2019-05-26
+## [2.1.22] - 2019-05-26
 
 ### Added
 
@@ -52,7 +70,7 @@ All notable changes to this project will be documented in this file.
 
 - `Donate` button.
 
-## [1.1.21] - 2019-05-25
+## [2.1.21] - 2019-05-25
 
 ### Added
 
@@ -60,7 +78,7 @@ All notable changes to this project will be documented in this file.
 
 - Badges.
 
-## [1.1.20] - 2019-05-25
+## [2.1.20] - 2019-05-25
 
 ### Added
 
@@ -68,7 +86,7 @@ All notable changes to this project will be documented in this file.
 
 - License badge.
 
-## [1.1.19] - 2019-05-23
+## [2.1.19] - 2019-05-23
 
 ### Changed
 
@@ -76,7 +94,7 @@ All notable changes to this project will be documented in this file.
 
 - Handling of non-root user.
 
-## [1.1.18] - 2019-05-22
+## [2.1.18] - 2019-05-22
 
 ### Added
 
@@ -90,7 +108,7 @@ All notable changes to this project will be documented in this file.
 
 - `TODO` section.
 
-## [1.1.17] - 2019-04-29
+## [2.1.17] - 2019-04-29
 
 ### Removed
 
@@ -98,7 +116,7 @@ All notable changes to this project will be documented in this file.
 
 - Spaces.
 
-## [1.1.16] - 2019-04-28
+## [2.1.16] - 2019-04-28
 
 ### Changed
 
@@ -106,7 +124,7 @@ All notable changes to this project will be documented in this file.
 
 - Space to tab.
 
-## [1.1.15] - 2019-04-28
+## [2.1.15] - 2019-04-28
 
 ### Changed
 
@@ -114,7 +132,7 @@ All notable changes to this project will be documented in this file.
 
 - Commands.
 
-## [1.1.14] - 2019-04-28
+## [2.1.14] - 2019-04-28
 
 ### Changed
 
@@ -122,7 +140,7 @@ All notable changes to this project will be documented in this file.
 
 - Mode from `644` to `755`.
 
-## [1.1.13] - 2019-04-28
+## [2.1.13] - 2019-04-28
 
 ### Changed
 
@@ -130,7 +148,7 @@ All notable changes to this project will be documented in this file.
 
 - Installation commands in `Linux` section.
 
-## [1.1.12] - 2019-03-29
+## [2.1.12] - 2019-03-29
 
 ### Changed
 
@@ -145,13 +163,13 @@ All notable changes to this project will be documented in this file.
 
 - Links in `Content` section.
 
-## [1.1.11] - 2019-03-29
+## [2.1.11] - 2019-03-29
 
 ### Added
 
 - [install.sh](install.sh) file.
 
-## [1.1.10] - 2019-03-29
+## [2.1.10] - 2019-03-29
 
 ### Changed
 
@@ -159,13 +177,13 @@ All notable changes to this project will be documented in this file.
 
 - `Windows` subsection in `Installation` section.
 
-## [1.1.9] - 2019-03-29
+## [2.1.9] - 2019-03-29
 
 ### Added
 
 - [install.bat](install.bat) file.
 
-## [1.1.8] - 2019-03-29
+## [2.1.8] - 2019-03-29
 
 ### Removed
 
@@ -173,7 +191,7 @@ All notable changes to this project will be documented in this file.
 
 - Dollar signs before commands.
 
-## [1.1.7] - 2019-03-25
+## [2.1.7] - 2019-03-25
 
 ### Added
 
@@ -188,7 +206,7 @@ All notable changes to this project will be documented in this file.
 
 - Moved `Instructions` and `Commands` sections to `Documentation` section.
 
-## [1.1.6] - 2019-03-14
+## [2.1.6] - 2019-03-14
 
 ### Added
 
@@ -196,7 +214,7 @@ All notable changes to this project will be documented in this file.
 
 - `APT` and `Pacman` subsections to `Linux` section.
 
-## [1.1.5] - 2019-03-14
+## [2.1.5] - 2019-03-14
 
 ### Added
 
@@ -210,7 +228,7 @@ All notable changes to this project will be documented in this file.
 
 - `Description` header.
 
-## [1.1.4] - 2019-03-04
+## [2.1.4] - 2019-03-04
 
 ### Changed
 
@@ -218,7 +236,7 @@ All notable changes to this project will be documented in this file.
 
 - List to table in `Commands` section.
 
-## [1.1.3] - 2019-03-04
+## [2.1.3] - 2019-03-04
 
 ### Added
 
@@ -226,7 +244,7 @@ All notable changes to this project will be documented in this file.
 
 - `MacOS` subsection to `Installation` section.
 
-## [1.1.2] - 2019-02-24
+## [2.1.2] - 2019-02-24
 
 ### Removed
 
@@ -234,7 +252,7 @@ All notable changes to this project will be documented in this file.
 
 - My nickname from my name in `Authors` section.
 
-## [1.1.1] - 2019-02-19
+## [2.1.1] - 2019-02-19
 
 ### Added
 
@@ -242,7 +260,7 @@ All notable changes to this project will be documented in this file.
 
 - Description of `m` command to `Commands` section.
 
-## [1.1.0] - 2019-02-19
+## [2.1.0] - 2019-02-19
 
 ### Added
 
@@ -256,7 +274,7 @@ All notable changes to this project will be documented in this file.
 
 - Implementation of `c` command for `C`.
 
-## [1.0.4] - 2019-02-19
+## [2.0.4] - 2019-02-19
 
 ### Changed
 
@@ -264,7 +282,7 @@ All notable changes to this project will be documented in this file.
 
 - Description of `c` command.
 
-## [1.0.3] - 2019-02-19
+## [2.0.3] - 2019-02-19
 
 ### Changed
 
@@ -274,7 +292,7 @@ All notable changes to this project will be documented in this file.
 - Reversed loop for `.` command for `C`.
 - Reversed loop for `.` command for `C++`.
 
-## [1.0.2] - 2019-02-19
+## [2.0.2] - 2019-02-19
 
 ### Changed
 
@@ -283,7 +301,7 @@ All notable changes to this project will be documented in this file.
 - Error handling.
 - Decimal to scientific notation for `Ruby`.
 
-## [1.0.1] - 2019-02-19
+## [2.0.1] - 2019-02-19
 
 ### Added
 
@@ -291,7 +309,7 @@ All notable changes to this project will be documented in this file.
 
 - Descript of `c` and `C` commands to `Commands` section.
 
-## [1.0.0] - 2019-02-19
+## [2.0.0] - 2019-02-19
 
 ### Added
 
@@ -300,7 +318,7 @@ All notable changes to this project will be documented in this file.
 - `c` and `C` commands.
 - Initialization and finalization part for `brainfuck`, `blub`, `ook!`, `*brainfuck`, `binaryfuck`.
 
-## [0.5.9] - 2019-02-19
+## [1.5.9] - 2019-02-19
 
 ### Removed
 
@@ -308,13 +326,13 @@ All notable changes to this project will be documented in this file.
 
 - Information that more complicated programs may not work for `Ruby`.
 
-## [0.5.8] - 2019-02-19
+## [1.5.8] - 2019-02-19
 
 ### Fixed
 
 - Limit size of the byte for `Ruby`.
 
-## [0.5.7] - 2019-02-19
+## [1.5.7] - 2019-02-19
 
 ### Removed
 
@@ -322,7 +340,7 @@ All notable changes to this project will be documented in this file.
 
 - Information that more complicated programs may not work for `C++`.
 
-## [0.5.6] - 2019-02-19
+## [1.5.6] - 2019-02-19
 
 ### Changed
 
@@ -330,7 +348,7 @@ All notable changes to this project will be documented in this file.
 
 - `char` to `unsigned char` for `C++`.
 
-## [0.5.5] - 2019-02-19
+## [1.5.5] - 2019-02-19
 
 ### Added
 
@@ -344,7 +362,7 @@ All notable changes to this project will be documented in this file.
 
 - `Compile` to `Convert`, `LANG` to `<language>`, `INPUT` to `<input>` and `OUTPUT` to `<output>` in `Usage` section.
 
-## [0.5.4] - 2019-02-19
+## [1.5.4] - 2019-02-19
 
 ### Changed
 
@@ -354,9 +372,9 @@ All notable changes to this project will be documented in this file.
 - `OUTPUT` to `<output>` in description of `--output` argument.
 
 
-## [0.5.3] - 2019-02-19
+## [1.5.3] - 2019-02-19
 
-## [0.5.2] - 2019-02-19
+## [1.5.2] - 2019-02-19
 
 ### Added
 
@@ -370,7 +388,7 @@ All notable changes to this project will be documented in this file.
 
 - File open mode for `output` and `input` from `w` to `w+`.
 
-## [0.5.1] - 2019-02-19
+## [1.5.1] - 2019-02-19
 
 ### Added
 
@@ -379,7 +397,7 @@ All notable changes to this project will be documented in this file.
 - `*brainfuck` and `Binaryfuck` to `Supported languages` section.
 - Information that some commands are not implemented for `*brainfuck` and `Binaryfuck`.
 
-## [0.5.0] - 2019-02-19
+## [1.5.0] - 2019-02-19
 
 ### Added
 
@@ -393,7 +411,7 @@ All notable changes to this project will be documented in this file.
 
 - Unnecessary multiplication of `0` command for `Blub` and `Ook!`.
 
-## [0.4.2] - 2019-02-19
+## [1.4.2] - 2019-02-19
 
 ### Fixed
 
@@ -401,7 +419,7 @@ All notable changes to this project will be documented in this file.
 
 - Bug that caused repeated commands to be counted only once in `Blub` and `Ook!`.
 
-## [0.4.1] - 2019-02-19
+## [1.4.1] - 2019-02-19
 
 ### Added
 
@@ -409,7 +427,7 @@ All notable changes to this project will be documented in this file.
 
 - Implementation of `0` command for `Blub` and `Ook!`.
 
-## [0.4.0] - 2019-02-19
+## [1.4.0] - 2019-02-19
 
 ### Added
 
@@ -417,7 +435,7 @@ All notable changes to this project will be documented in this file.
 
 - Support for `Blub` and `Ook!`.
 
-## [0.3.2] - 2019-02-19
+## [1.3.2] - 2019-02-19
 
 ### Added
 
@@ -426,9 +444,9 @@ All notable changes to this project will be documented in this file.
 - `Blub` and `Ook!` to `Supported languages` section.
 - Information that some commands are not implemented for `Blub` and `Ook!`.
 
-## [0.3.1] - 2019-02-19
+## [1.3.1] - 2019-02-19
 
-## [0.3.0] - 2019-02-19
+## [1.3.0] - 2019-02-19
 
 ### Added
 
@@ -437,7 +455,7 @@ All notable changes to this project will be documented in this file.
 - `x` and `X` commands.
 - `stdlib.h` to libraries included by `C`.
 
-## [0.2.5] - 2019-02-19
+## [1.2.5] - 2019-02-19
 
 ### Added
 
@@ -447,7 +465,7 @@ All notable changes to this project will be documented in this file.
 - Information that more complicated program may not work for `Ruby` and `C++`.
 - My nickname to my name in `Authors` section.
 
-## [0.2.4] - 2019-02-18
+## [1.2.4] - 2019-02-18
 
 ### Added
 
@@ -459,13 +477,13 @@ All notable changes to this project will be documented in this file.
 
 - Post-incrementation to pre-incrementation for `C` and `C++`.
 
-## [0.2.3] - 2019-02-18
+## [1.2.3] - 2019-02-18
 
 ### Deleted
 
 - [main.rb](main.rb) file.
 
-## [0.2.2] - 2019-02-18
+## [1.2.2] - 2019-02-18
 
 ### Changed
 
@@ -473,7 +491,7 @@ All notable changes to this project will be documented in this file.
 
 - `Copy` to `Clone` in `Installation` section.
 
-## [0.2.1] - 2019-02-18
+## [1.2.1] - 2019-02-18
 
 ### Added
 
@@ -488,7 +506,7 @@ All notable changes to this project will be documented in this file.
 - Project's name to bold in `Description` section.
 - Information that not all commands are supported in `Brainfuck`.
 
-## [0.2.0] - 2019-02-18
+## [1.2.0] - 2019-02-18
 
 ### Added
 
@@ -502,7 +520,7 @@ All notable changes to this project will be documented in this file.
 
 - Merged `if` some blocks for `C` and `C++`.
 
-## [0.1.4] - 2019-02-18
+## [1.1.4] - 2019-02-18
 
 ### Added
 
@@ -510,7 +528,7 @@ All notable changes to this project will be documented in this file.
 
 - Variables representing stack and stack pointer for `C` and `C++`.
 
-## [0.1.3] - 2019-02-18
+## [1.1.3] - 2019-02-18
 
 ### Changed
 
@@ -518,7 +536,7 @@ All notable changes to this project will be documented in this file.
 
 - `Installing` to `Installation` section.
 
-## [0.1.2] - 2019-02-17
+## [1.1.2] - 2019-02-17
 
 ### Added
 
@@ -529,7 +547,7 @@ All notable changes to this project will be documented in this file.
 - Dollar signs before commands.
 - Changed contribution to title in `Authors` section.
 
-## [0.1.1] - 2019-02-17
+## [1.1.1] - 2019-02-17
 
 ### Changed
 
@@ -537,7 +555,7 @@ All notable changes to this project will be documented in this file.
 
 - `INSTRUCTIONS` to `COMMANDS`.
 
-## [0.1.0] - 2019-02-17
+## [1.1.0] - 2019-02-17
 
 ### Added
 
@@ -551,7 +569,7 @@ All notable changes to this project will be documented in this file.
 
 - Argument help message.
 
-## [0.0.4] - 2019-02-16
+## [1.0.2] - 2019-02-16
 
 ### Added
 
@@ -559,7 +577,7 @@ All notable changes to this project will be documented in this file.
 
 - Documentation.
 
-## [0.0.3] - 2019-02-16
+## [1.0.1] - 2019-02-16
 
 ### Added
 
@@ -567,13 +585,13 @@ All notable changes to this project will be documented in this file.
 
 - Other characters than commands are ignored in `_201` function.
 
-## [0.0.2] - 2019-02-16
+## [1.0.0] - 2019-02-16
 
 ### Added
 
 - [main.rb](main.rb) file.
 
-## [0.0.1] - 2019-02-16
+## [1.0.0] - 2019-02-16
 
 ### Added
 
