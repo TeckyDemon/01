@@ -1,0 +1,9 @@
+*
+!.gitignore
+!CHANGELOG.md
+!install.bat
+!install.sh
+!LICENSE
+!main.rb
+!README.md
+!VERSION

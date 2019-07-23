@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.28] - 2019-07-23
+
+### Added
+
+- `.gitignore` file.
+
 ## [2.1.27] - 2019-07-23
 
 ### Added
