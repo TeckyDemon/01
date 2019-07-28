@@ -114,19 +114,19 @@ cd ..
 
 ### Required arguments
 
-| Argument                 | Description                                   |
-| :----------------------- | :-------------------------------------------- |
-| -i PATH<br>--input PATH  | Sets the path of the input file to **PATH**.  |
-| -o PATH<br>--output PATH | Sets the path of the output file to **PATH**. |
+| Argument          | Description               |
+| :---------------- | :------------------------ |
+| -i, --input PATH  | Sets path to input file.  |
+| -o, --output PATH | Sets path to output file. |
 
 ### Optional arguments
 
-| Argument                  | Description                           |
-| :------------------------ | :------------------------------------ |
-| -c LANG<br>--convert LANG | Sets the output language to **LANG**. |
-| -g<br>--generate          | Converts *.tzo file to *.zo file.     |
-| -m<br>--minify            | Minifies *.zo file.                   |
-| -h<br>--hex               | Converts *.zo file to hex.            |
+| Argument           | Description                                       |
+| :----------------- | :------------------------------------------------ |
+| -c, --convert LANG | Converts *.zo file to other language source file. |
+| -g, --generate     | Converts *.tzo file to *.zo file.                 |
+| -m, --minify       | Minifies *.zo file.                               |
+| -h, --hex          | Converts *.zo file to hex.                        |
 
 ### Instructions
 
